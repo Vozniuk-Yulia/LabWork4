@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Reflection;
+
 namespace Task3
 {
     internal class Program
@@ -12,16 +14,12 @@ namespace Task3
             goods.Add(product);
             goods.Add(clothes);
             goods.Add(device);
-            foreach (Goods good in goods)
-            {
-                good.ShowInfo();
-                Console.WriteLine();
-            }
-            typeof(Clothes)
-               .GetProperties()
-               .Select(x => x.GetValue(clothes, null))
-               .ToList()
-               .ForEach(x => Console.WriteLine(x));
+            Type t1 = typeof(Goods);
+            Type t2 = typeof(Clothes);
+            Type t3 = typeof(Product);
+            Type t4 = typeof(Device);
+            DebugDisplay debugDisplay = new DebugDisplay();
+            debugDisplay.OutoutInfoToDebug(t1, t2, t3, t4);
         }
     }
 }

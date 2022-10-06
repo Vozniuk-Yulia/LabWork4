@@ -16,6 +16,16 @@ namespace Task3
             get { return calories; }
             set { calories = value; }
         }
+        public DateOnly ExpirationDate
+        {
+            get { return expirationDate; }
+            set { expirationDate = value; }
+        }
+        public string SubCategory
+        {
+            get { return subCategory; }
+            set { subCategory = value; }
+        }
         public Product(string name, int code, string description, int price,double calories,DateOnly expirationDate,string subCategory):base(name,code,description,price)
         {
             this.calories = calories;

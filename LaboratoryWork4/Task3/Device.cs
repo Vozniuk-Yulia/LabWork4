@@ -10,6 +10,16 @@ namespace Task3
     {
         private int memorySize;
         private int screenDiagonal;
+        public int MemorySize
+        {
+            get { return memorySize; }
+            set { memorySize = value; }
+        }
+        public int ScreenDiagonal
+        {
+            get { return screenDiagonal; }
+            set { screenDiagonal = value; }
+        }
         public Device(string name, int code, string description, int price, int memorySize, int screenDiagonal) : base(name, code, description, price)
         {
             this.memorySize = memorySize;
